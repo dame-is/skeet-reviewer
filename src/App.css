@@ -1,0 +1,376 @@
+/* Define CSS variables for header and footer heights */
+:root {
+  --header-height: 80px; /* Adjust this value based on your actual header height */
+  --footer-height: 80px; /* Adjust this value based on your actual footer height */
+}
+
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding-top: var(--header-height);    /* Space for the fixed header */
+  padding-bottom: var(--footer-height);/* Space for the fixed footer */
+  min-height: 100vh; /* Ensure body is at least viewport height */
+}
+
+/* Enable smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* The header container fixed at the top */
+.review-header {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffffff;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+/* The bottom container fixed at the bottom */
+.bottom-stuff {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffffff;
+  box-shadow: 0 -4px 6px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+/* The middle container that adjusts height and can scroll with the page */
+.post-content {
+  /* Remove fixed margins to allow natural flow based on body padding */
+  
+  max-width: 500px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  padding: 15px;
+  border-radius: 4px;
+  color: #555;
+  text-align: left;
+  
+  /* Removed internal scrolling and max-height */
+  /* overflow-y: auto; */
+  /* max-height: 500px; */
+  
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Spacer Styling */
+.spacer {
+  height: 200px; /* Adjust this value as needed to extend the scroll */
+}
+
+/* Header styles */
+.review-header h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 10px;
+  margin-top: 0px;
+}
+
+.review-header h2 {
+  font-size: 1.0rem;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  color: #007bff;
+}
+
+/* Prompt */
+.prompt {
+  text-align: center;
+}
+
+/* User Handle */
+.user-handle {
+  color: #555;
+  text-align: left;
+  margin-bottom: 10px;
+  padding-right: 10px;
+}
+
+/* Post Link */
+.post-link {
+  font-size: 0.8em;
+  margin-top: 3px;
+}
+
+.filter-toggles {
+  text-align: center;
+}
+
+.filters-row {
+  margin-bottom: 15px;
+}
+
+.filter-label {
+  padding: 0px 10px;
+}
+
+.version-info {
+  font-size: 0.8em;
+  margin-top: 5px;
+}
+
+/* Counters, logout, actions inside bottom-stuff */
+.counters {
+  margin-top: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 10px;
+  background: #f1f1f1;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-align: center;
+  color: #555;
+}
+
+.counters p {
+  margin: 5px 0;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.actions button {
+  flex: 1;
+  margin: 0 5px;
+  padding: 10px 15px;
+  background: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.actions button:hover {
+  background: #0056b3;
+}
+
+.actions button:disabled {
+  background: #ddd;
+  cursor: not-allowed;
+}
+
+.logout-button {
+  display: block;
+  width: 98%;
+  margin-top: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 10px 15px;
+  background-color: #ff4d4f;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.logout-button:hover {
+  background-color: #e63946;
+}
+
+.logout-button:active {
+  background-color: #cc3235;
+}
+
+.login-container {
+  background: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  margin: 20px auto;
+}
+
+.login-container h2 {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.login-container input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.login-container button {
+  width: 50%;
+  margin-top: 20px;
+  padding: 10px 15px;
+  background: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-container button:hover {
+  background: #0056b3;
+}
+
+.login-container button:active {
+  background: #003f8f;
+}
+
+.login-description {
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-bottom: 10px;
+}
+
+.credit-link {
+  padding-top: 15px;
+  font-size: 0.9em !important;
+}
+
+.skeleton-container {
+  padding: 20px;
+  background: #f2f2f2;
+  border-radius: 8px;
+  animation: skeleton-loading 1.2s infinite ease-in-out;
+  text-align: center;
+}
+
+.skeleton-line {
+  height: 16px;
+  background: #e0e0e0;
+  margin-bottom: 12px;
+  border-radius: 4px;
+}
+
+.skeleton-line.title {
+  width: 60%;
+  height: 20px;
+}
+
+.skeleton-line.body {
+  width: 90%;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: #e0e0e0;
+  }
+  50% {
+    background-color: #d1d1d1;
+  }
+  100% {
+    background-color: #e0e0e0;
+  }
+}
+
+.fade-in {
+  display: block;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.fade-in.loaded {
+  opacity: 1;
+}
+
+/* Main page scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 123, 255, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+bluesky-post {
+  display: block;
+}
+
+/* ---------------------------- */
+/* All Reviewed Container Styles */
+/* ---------------------------- */
+
+/* Style for the All Reviewed Container */
+.all-reviewed-container {
+  background: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  border-radius: 8px; /* Rounded corners */
+  padding: 30px 20px; /* Adequate padding */
+  max-width: 400px; /* Consistent width with login-container */
+  width: 90%; /* Responsive width */
+  margin: 40px auto; /* Centered alignment with top and bottom margins */
+  text-align: center; /* Centered text */
+}
+
+/* ---------------------------- */
+/* Error Message Styles */
+/* ---------------------------- */
+
+/* Style for Error Messages */
+.error-message {
+  background-color: #ffe6e6; /* Light red background */
+  color: #cc0000; /* Dark red text for contrast */
+  border: 1px solid #ff4d4d; /* Slightly darker red border */
+  border-radius: 4px; /* Rounded corners */
+  padding: 15px 20px; /* Padding for readability */
+  margin: 20px auto; /* Centered with vertical spacing */
+  max-width: 400px; /* Consistent width with main containers */
+  width: 90%; /* Responsive width */
+  font-size: 1em; /* Readable font size */
+  box-sizing: border-box; /* Ensures padding is included in width */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: fadeInSlideDown 0.5s forwards;
+}
+
+/* Add an icon to the error message for better UX */
+.error-message::before {
+  content: "⚠️ "; /* Warning emoji */
+  font-size: 1.2em;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+/* Keyframes for fade-in and slide-down effect */
+@keyframes fadeInSlideDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
