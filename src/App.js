@@ -502,6 +502,18 @@ const BlueskyPostManager = () => {
               Made by @dame.bsky.social
             </a>
           </div>
+
+          {/* Github Link */}
+          <div className="github-link">
+            <a
+              href="https://github.com/damedotblog/skeet-reviewer"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="github-link-anchor"
+            >
+              View code on Github
+            </a>
+          </div>
         </div>
       </div>
     );
@@ -622,6 +634,18 @@ const BlueskyPostManager = () => {
             Made by @dame.bsky.social
           </a>
         </div>
+
+          {/* Github Link */}
+          <div className="github-link">
+            <a
+              href="https://github.com/damedotblog/skeet-reviewer"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="github-link-anchor"
+            >
+              View code on Github
+            </a>
+          </div>
         
         <div className="version-info">
           {version}
