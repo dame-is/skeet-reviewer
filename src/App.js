@@ -442,77 +442,82 @@ const BlueskyPostManager = () => {
 
   if (!authenticated) {
     return (
-      <div className="login-container">
-        <div className="login-header">
-          <h1 className="login-title">Skeet Reviewer</h1>
-          {/* Descriptive Text */}
-          <p className="login-description">
-            A tool that helps you sort through your post archive to delete unwanted skeets.
-          </p>
-        </div>
-
-        <div className="login-form">
-          <h2 className="login-subtitle">Login to Bluesky</h2>
-
-          <div className="form-group">
-            <label htmlFor="handle" className="form-label">Bluesky Handle</label>
-            <input
-              type="text"
-              id="handle"
-              className="form-input"
-              placeholder="user.bsky.social"
-              value={handle}
-              onChange={(e) => setHandle(e.target.value)}
-            />
+      <div className="parent-container"> {/* Added parent container */}
+        <div className="login-container">
+          <div className="login-header">
+            <h1 className="login-title">Skeet Reviewer</h1>
+            {/* Descriptive Text */}
+            <p className="login-description">
+              A tool that helps you manually sort through your post archive to delete unwanted skeets.
+            </p>
           </div>
 
-          <div className="form-group">
-            <label htmlFor="appPassword" className="form-label">App Password</label>
-            <input
-              type="password"
-              id="appPassword"
-              className="form-input"
-              placeholder="keod-iadh-kbrx-pafw"
-              value={appPassword}
-              onChange={(e) => setAppPassword(e.target.value)}
-            />
-          </div>
+          <div className="login-form">
+            <h2 className="login-subtitle">Login to Bluesky</h2>
 
-          <div className="form-links">
-            <a
-              href="https://bsky.app/settings/app-passwords"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="form-link"
-            >
-              Need an app password? Go here.
-            </a>
-          </div>
+            <div className="form-group">
+              <label htmlFor="handle" className="form-label">Bluesky Handle</label>
+              <input
+                type="text"
+                id="handle"
+                className="form-input"
+                placeholder="user.bsky.social"
+                value={handle}
+                onChange={(e) => setHandle(e.target.value)}
+              />
+            </div>
 
-          <button className="login-button" onClick={handleLogin}>Login</button>
+            <div className="form-group">
+              <label htmlFor="appPassword" className="form-label">App Password</label>
+              <input
+                type="password"
+                id="appPassword"
+                className="form-input"
+                placeholder="keod-iadh-kbrx-pafw"
+                value={appPassword}
+                onChange={(e) => setAppPassword(e.target.value)}
+              />
+            </div>
 
-          {/* Credit Link */}
-          <div className="credit-link">
-            <a
-              href="https://bsky.app/profile/dame.bsky.social"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="credit-link-anchor"
-            >
-              Made by @dame.bsky.social
-            </a>
-          </div>
+            <div className="form-links">
+              <a
+                href="https://bsky.app/settings/app-passwords"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="form-link"
+              >
+                Need an app password? Go here.
+              </a>
+            </div>
 
-          {/* Github Link */}
-          <div className="github-link">
-            <a
-              href="https://github.com/damedotblog/skeet-reviewer"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="github-link-anchor"
-            >
-              View code on Github
-            </a>
+            <button className="login-button" onClick={handleLogin}>Login</button>
+
+            {/* Credit Link */}
+            <div className="credit-link">
+              <a
+                href="https://bsky.app/profile/dame.bsky.social"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="credit-link-anchor"
+              >
+                Made by @dame.bsky.social
+              </a>
+            </div>
+
+            {/* Github Link */}
+            <div className="github-link">
+              <a
+                href="https://github.com/damedotblog/skeet-reviewer"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="github-link-anchor"
+              >
+                View code on Github
+              </a>
+            </div>
+            <div className="version-info">
+            {version}
+            </div>
           </div>
         </div>
       </div>
@@ -647,7 +652,7 @@ const BlueskyPostManager = () => {
             </a>
           </div>
         
-        <div className="version-info">
+        <div className="version-info2">
           {version}
         </div>
       </div>

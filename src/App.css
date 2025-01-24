@@ -12,6 +12,9 @@ body {
   padding-top: var(--header-height);    /* Space for the fixed header */
   padding-bottom: var(--footer-height);/* Space for the fixed footer */
   min-height: 100vh; /* Ensure body is at least viewport height */
+  display: flex;
+  align-content: center;
+  justify-content: center;
 }
 
 /* Enable smooth scrolling for the entire page */
@@ -27,7 +30,6 @@ html {
   transform: translateX(-50%);
   background: #ffffff;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  border-radius: 8px;
   max-width: 500px;
   width: 100%;
   text-align: center;
@@ -44,7 +46,6 @@ html {
   transform: translateX(-50%);
   background: #ffffff;
   box-shadow: 0 -4px 6px rgba(0,0,0,0.1);
-  border-radius: 8px;
   max-width: 500px;
   width: 100%;
   text-align: center;
@@ -129,6 +130,12 @@ html {
 .version-info {
   font-size: 0.8em;
   margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.version-info {
+  font-size: 0.8em;
+  margin-top: 5px;
 }
 
 /* Counters, logout, actions inside bottom-stuff */
@@ -203,10 +210,10 @@ html {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   padding: 20px;
-  max-width: 500px;
-  width: 100%;
+  max-width: 400px;
   text-align: center;
-  margin: 20px auto;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .login-container h2 {
@@ -222,6 +229,7 @@ html {
   border: 1px solid #ddd;
   border-radius: 4px;
   font-size: 16px;
+  text-align: center;
 }
 
 .login-container button {
@@ -245,14 +253,30 @@ html {
 }
 
 .login-description {
-  padding-left: 80px;
-  padding-right: 80px;
+  padding-left: 50px;
+  padding-right: 50px;
   padding-bottom: 10px;
+}
+
+.form-group {
+  max-width: 300px;
+  margin: auto;
+}
+
+.form-links {
+  margin-top: 6px;
+  font-size: 0.8em;
 }
 
 .credit-link {
   padding-top: 15px;
+  padding-bottom: 5px;
   font-size: 0.9em !important;
+}
+
+.github-link {
+  font-size: 0.8em;
+  margin-bottom: 5px;
 }
 
 .skeleton-container {
