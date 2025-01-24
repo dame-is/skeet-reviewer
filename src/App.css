@@ -127,15 +127,15 @@ html {
   padding: 0px 10px;
 }
 
-.version-info {
+.version-info2 {
   font-size: 0.8em;
   margin-top: 5px;
-  margin-bottom: 20px;
 }
 
 .version-info {
   font-size: 0.8em;
   margin-top: 5px;
+  margin-bottom: 20px;
 }
 
 /* Counters, logout, actions inside bottom-stuff */
