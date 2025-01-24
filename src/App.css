@@ -274,10 +274,6 @@ html {
   font-size: 0.9em !important;
 }
 
-.github-link {
-  font-size: 0.8em;
-  margin-bottom: 5px;
-}
 
 .skeleton-container {
   padding: 20px;
@@ -398,3 +394,15 @@ bluesky-post {
   }
 }
 
+
+
+
+.github-link {
+  font-size: 0.8em;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.action-button.delete-button {
+  background: #676767;
+}
