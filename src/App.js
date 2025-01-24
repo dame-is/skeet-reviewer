@@ -11,7 +11,7 @@ import 'bluesky-post-embed/themes/light.css';
 
 import ErrorBoundary from './ErrorBoundary'; // Import the ErrorBoundary component
 
-const version = 'v0.5.0'; // Updated version number for changes
+const version = 'v0.6.0'; // Updated version number for changes
 
 const BlueskyPostManager = () => {
   const [posts, setPosts] = useState([]); 
